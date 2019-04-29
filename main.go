@@ -11,6 +11,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/renatoaguimaraes/golang-microservice/controller"
+	"github.com/renatoaguimaraes/golang-microservice/util"
 )
 
 func main() {
@@ -37,7 +38,7 @@ func main() {
 
 	go func() {
 		if err := srv.ListenAndServe(); err != nil {
-			log.Println(err)
+			log.Fatal(err)
 		}
 	}()
 
@@ -53,13 +54,15 @@ func main() {
 	// Doesn't block if no connections, but will otherwise wait
 	// until the timeout deadline.
 	go func() {
+		// close cassandra connection
+		util.Close()
 		srv.Shutdown(ctx)
 	}()
 	// Optionally, you could run srv.Shutdown in a goroutine and block on
 	// <-ctx.Done() if your application should wait for other services
 	// to finalize based on context cancellation.
 	<-ctx.Done()
-
+	// end
 	log.Println("shutting down")
 	os.Exit(0)
 }
