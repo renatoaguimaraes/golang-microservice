@@ -1,7 +1,7 @@
 # golang-microservice
 
 ```console
-$ docker run --name some-cassandra -p 9042:9042  -d cassandra
+$ docker run --name some-cassandra -p 9042:9042 -d cassandra
 $ docker exec -it some-cassandra bash
 root@4d3c1fdd8f4c:/# cqlsh
 Connected to Test Cluster at 127.0.0.1:9042.
