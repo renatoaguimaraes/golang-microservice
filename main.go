@@ -21,10 +21,10 @@ func main() {
 
 	router := mux.NewRouter()
 	router.Use(commonMiddleware)
-	router.HandleFunc("/user", controller.GetUsers).Methods("GET")
-	router.HandleFunc("/user/{id}", controller.GetUser).Methods("GET")
-	router.HandleFunc("/user/{id}", controller.CreateUser).Methods("POST")
-	router.HandleFunc("/user/{id}", controller.DeleteUser).Methods("DELETE")
+	router.HandleFunc("/users", controller.GetUsers).Methods("GET")
+	router.HandleFunc("/users/{id}", controller.GetUser).Methods("GET")
+	router.HandleFunc("/users/{id}", controller.CreateUser).Methods("POST")
+	router.HandleFunc("/users/{id}", controller.DeleteUser).Methods("DELETE")
 
 	srv := &http.Server{
 		Addr:         "0.0.0.0:8000",
