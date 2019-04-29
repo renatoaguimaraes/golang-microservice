@@ -1,13 +1,9 @@
 # golang-microservice
 
-### Project download
+### Project setup
 ```console
 $ git clone https://github.com/renatoaguimaraes/golang-microservice.git
 $ cd golang-microservice
-```
-
-### Project dependencies install
-```console
 $ go get github.com/gocql/gocql
 $ go get github.com/gorilla/mux
 ```
