@@ -33,8 +33,7 @@ List users  - GET    - http://localhost:8000/users
 Get user    - GET    - http://localhost:8000/users/{id}
 Create user - POST   - http://localhost:8000/users/{id}
 Remove user - DELETE - http://localhost:8000/users/{id}
+```
 
 ### Cassandra driver
 [4 simple rules when using the DataStax drivers for Cassandra]:(https://www.datastax.com/dev/blog/4-simple-rules-when-using-the-datastax-drivers-for-cassandra)
-
-```
