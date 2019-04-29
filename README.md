@@ -19,3 +19,16 @@ Use HELP for help.
 cqlsh> CREATE KEYSPACE users WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
 cqlsh> CREATE TABLE users.users (id text, firstname text, lastname text, PRIMARY KEY(id));
 ```
+### Project build and run
+```console
+go build main.go
+./main
+```
+### Resources
+
+```
+List users  - GET    http://localhost:8000/users
+Get user    - GET    http://localhost:8000/users/{id}
+Create user - POST   http://localhost:8000/users/{id}
+Remove user - DELETE http://localhost:8000/users/{id}
+```
