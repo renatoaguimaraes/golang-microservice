@@ -1,5 +1,18 @@
 # golang-microservice
 
+### Project download
+```console
+$ git clone https://github.com/renatoaguimaraes/golang-microservice.git
+$ cd golang-microservice
+```
+
+### Project dependencies install
+```console
+$ go get github.com/gocql/gocql
+$ go get github.com/gorilla/mux
+```
+
+### Cassandra setup
 ```console
 $ docker run --name some-cassandra -p 9042:9042 -d cassandra
 $ docker exec -it some-cassandra bash
