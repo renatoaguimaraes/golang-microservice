@@ -48,5 +48,4 @@ func DeleteUser(w http.ResponseWriter, r *http.Request) {
 	} else {
 		w.WriteHeader(http.StatusNotFound)
 	}
-
 }

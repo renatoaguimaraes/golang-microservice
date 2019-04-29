@@ -21,6 +21,7 @@ func main() {
 
 	router := mux.NewRouter()
 	router.Use(commonMiddleware)
+
 	router.HandleFunc("/users", controller.GetUsers).Methods("GET")
 	router.HandleFunc("/users/{id}", controller.GetUser).Methods("GET")
 	router.HandleFunc("/users/{id}", controller.CreateUser).Methods("POST")
