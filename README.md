@@ -21,14 +21,14 @@ cqlsh> CREATE TABLE users.users (id text, firstname text, lastname text, PRIMARY
 ```
 ### Project build and run
 ```console
-go build main.go
-./main
+$ go build main.go
+$ ./main
 ```
 ### Resources
 
 ```
-List users  - GET    http://localhost:8000/users
-Get user    - GET    http://localhost:8000/users/{id}
-Create user - POST   http://localhost:8000/users/{id}
-Remove user - DELETE http://localhost:8000/users/{id}
+List users  - GET    - http://localhost:8000/users
+Get user    - GET    - http://localhost:8000/users/{id}
+Create user - POST   - http://localhost:8000/users/{id}
+Remove user - DELETE - http://localhost:8000/users/{id}
 ```
