@@ -2,6 +2,8 @@
 
 ### Project setup
 ```console
+$ mkdir -p $GOTPATH/src/github.com/renatoaguimaraes/
+$ cd $GOTPATH/src/github.com/renatoaguimaraes/
 $ git clone https://github.com/renatoaguimaraes/golang-microservice.git
 $ cd golang-microservice
 $ go get github.com/gocql/gocql
